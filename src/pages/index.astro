@@ -3,6 +3,7 @@ import Layout from "../layouts/Layout.astro";
 import Header from "../components/Header.astro";
 import Info from "../components/Info.astro";
 import "animate.css";
+import Projects from "../components/Projects.astro";
 ---
 
 <Layout title="Portfolio Miguel Guevara">
@@ -14,7 +15,7 @@ import "animate.css";
     <section class="flex lg:flex-row flex-col gap-3 text-gray-300">
       <Info />
 
-      <div class="border basis-1/3 rounded-lg overflow-hidden">
+      <div class="hidden lg:block border basis-1/3 rounded-lg overflow-hidden">
         <img
           src="/miguel.webp"
           alt="Miguel Guevara"
@@ -22,5 +23,7 @@ import "animate.css";
         />
       </div>
     </section>
+
+    <Projects />
   </main>
 </Layout>

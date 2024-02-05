@@ -7,7 +7,6 @@ import {
   SiNextdotjs,
   SiStrapi,
   SiAstro,
-  SiVisualstudio,
 } from "react-icons/si";
 
 const skills = [
@@ -47,23 +46,20 @@ const skills = [
     name: "PostgreSQL",
     icon: BiLogoPostgresql,
   },
-  {
-    name: "VS Code",
-    icon: SiVisualstudio,
-  },
 ];
 ---
 
 <section>
   <div class="border rounded-xl p-10">
+    <!-- <h3 class="text-4xl text-center mb-6 font-semibold">My Skills</h3> -->
     <div
-      class="flex flex-row items-center justify-center flex-wrap max-w-screen-sm mx-auto [&>div]:w-[102.4px] [&>div>svg]:text-white [&>div>svg]:text-5xl [&>div>svg]:basis-auto"
+      class="flex flex-row items-center justify-center flex-wrap mx-auto [&>div]:w-[89.4px] [&>div>svg]:text-white [&>div>svg]:text-5xl [&>div>svg]:basis-auto"
     >
       {
         skills.map((skill) => (
           <div class="flex flex-col items-center">
             <skill.icon className="hover-animation translate-y-3 hover:-translate-y-0 transition-all duration-700 [&+span]:hover:opacity-100" />
-            <span class="text-white opacity-0 duration-700 label text-lg">
+            <span class="text-white opacity-0 duration-700 text-lg">
               {skill.name}
             </span>
           </div>

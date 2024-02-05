@@ -6,7 +6,7 @@ import Skills from "./Skills.astro";
 <div class="flex flex-col gap-3">
   <div class="border basis-2/3 rounded-xl p-10">
     <div
-      class="flex md:flex-row md:gap-0 gap-3 flex-col md:items-center justify-between mb-7"
+      class="flex md:flex-row md:gap-0 gap-5 flex-col md:items-center justify-between mb-7"
     >
       <div class="flex items-center gap-3">
         <div class="w-10">
@@ -23,10 +23,28 @@ import Skills from "./Skills.astro";
         </div>
       </div>
 
-      <div class="flex gap-4 [&>svg]:text-3xl">
-        <FaGithub />
-        <FaLinkedinIn />
-        <FaInstagram />
+      <div class="flex gap-4 [&>a>svg]:text-3xl">
+        <a
+          class="hover:scale-110 hover:brightness-150 transition-all cursor-pointer"
+          href="https://github.com/MiguelGuevara25"
+          target="_blank"
+        >
+          <FaGithub />
+        </a>
+
+        <a
+          class="hover:scale-110 hover:brightness-150 transition-all cursor-pointer"
+          href="https://www.linkedin.com/in/migueldev1/"
+          target="_blank"
+        >
+          <FaLinkedinIn />
+        </a>
+
+        <a
+          class="hover:scale-110 hover:brightness-150 transition-all cursor-pointer"
+          href="https://www.instagram.com/frontend_miguel/"
+          target="_blank"><FaInstagram /></a
+        >
       </div>
     </div>
 
@@ -39,6 +57,14 @@ import Skills from "./Skills.astro";
         analyzing how I improved through them.
       </p>
     </div>
+  </div>
+
+  <div class="lg:hidden block border basis-1/3 rounded-lg overflow-hidden">
+    <img
+      src="/miguel.webp"
+      alt="Miguel Guevara"
+      class="rounded-lg h-full object-cover object-right"
+    />
   </div>
 
   <Skills />
