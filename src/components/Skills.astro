@@ -1,0 +1,74 @@
+---
+import { FaReact, FaNodeJs, FaGithub } from "react-icons/fa";
+import { BiLogoPostgresql } from "react-icons/bi";
+import {
+  SiTypescript,
+  SiTailwindcss,
+  SiNextdotjs,
+  SiStrapi,
+  SiAstro,
+  SiVisualstudio,
+} from "react-icons/si";
+
+const skills = [
+  {
+    name: "React",
+    icon: FaReact,
+  },
+  {
+    name: "Typescript",
+    icon: SiTypescript,
+  },
+  {
+    name: "TailwindCSS",
+    icon: SiTailwindcss,
+  },
+  {
+    name: "NextJS",
+    icon: SiNextdotjs,
+  },
+  {
+    name: "Strapi CMS",
+    icon: SiStrapi,
+  },
+  {
+    name: "NodeJS",
+    icon: FaNodeJs,
+  },
+  {
+    name: "Astro",
+    icon: SiAstro,
+  },
+  {
+    name: "Github",
+    icon: FaGithub,
+  },
+  {
+    name: "PostgreSQL",
+    icon: BiLogoPostgresql,
+  },
+  {
+    name: "VS Code",
+    icon: SiVisualstudio,
+  },
+];
+---
+
+<section>
+  <div class="border rounded-xl p-10">
+    <div
+      class="flex flex-row items-center justify-center flex-wrap max-w-screen-lg mx-auto [&>div]:w-[102.4px] [&>div>svg]:text-white [&>div>svg]:text-5xl [&>div>svg]:basis-auto"
+    >
+      {
+        skills.map((skill) => (
+          <div class="flex flex-col items-center">
+            <skill.icon className="hover-animation translate-y-3 hover:-translate-y-0 transition-all duration-700 [&+span]:hover:opacity-100" />
+            <span class="text-white opacity-0 duration-700 label text-lg">
+              {skill.name}
+            </span>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>
