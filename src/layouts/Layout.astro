@@ -1,6 +1,6 @@
 ---
 interface Props {
-  title: string;
+    title: string;
 }
 
 const { title } = Astro.props;
@@ -8,31 +8,68 @@ const { title } = Astro.props;
 
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="description" content="Astro description" />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="generator" content={Astro.generator} />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Catamaran:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
-    <title>{title}</title>
-  </head>
-  <body>
-    <slot />
-  </body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="description" content="Astro description" />
+        <meta name="viewport" content="width=device-width" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <meta name="generator" content={Astro.generator} />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Catamaran:wght@400;700&display=swap"
+            rel="stylesheet"
+        />
+        <title>{title}</title>
+    </head>
+    <body>
+        <slot />
+    </body>
 </html>
 
 <style is:global>
-  * {
-    font-family: "Catamaran", sans-serif;
-  }
+    * {
+        font-family: "Catamaran", sans-serif;
+    }
 
-  html {
-    background-color: #0f172a;
-  }
+    html {
+        background-color: #0f172a;
+    }
+
+    .custom-scrollbar {
+        overflow-x: auto; /* Permitir desplazamiento horizontal */
+        -webkit-overflow-scrolling: touch; /* Asegurar desplazamiento suave en móviles */
+    }
+
+    .custom-scrollbar::-webkit-scrollbar {
+        height: 10px;
+    }
+
+    .custom-scrollbar::-webkit-scrollbar-track {
+        background: #2d2d2d;
+        border-radius: 10px;
+    }
+
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+        background: #d1d5db;
+        border-radius: 10px;
+    }
+
+    .custom-scrollbar::-webkit-scrollbar-button {
+        width: 250px;
+    }
+
+    /* Para pantallas más grandes */
+    @media (min-width: 768px) {
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 10px;
+        }
+    }
+
+    /* Para dispositivos móviles */
+    @media (max-width: 767px) {
+        .custom-scrollbar::-webkit-scrollbar {
+            height: 8px;
+        }
+    }
 </style>

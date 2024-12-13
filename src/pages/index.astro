@@ -8,6 +8,7 @@ import Layout from "../layouts/Layout.astro";
 import Header from "../components/Header.astro";
 import MyExp from "../components/MyExp";
 import pdf from "/pdf/CV-Miguel-Guevara.pdf";
+import { dataProjects } from "../data";
 import "animate.css";
 
 const dataContact = {
@@ -34,6 +35,34 @@ const dataContact = {
                     alt="Miguel Guevara"
                     class="rounded-lg h-full object-cover object-right"
                 />
+            </div>
+        </section>
+
+        <section class="p-10 border rounded-lg">
+            <div
+                class="w-full text-gray-300 overflow-x-scroll overflow-y-hidden custom-scrollbar"
+            >
+                <h3 class="text-4xl font-bold mb-8">My Projects</h3>
+                <div class="flex gap-5 mb-10">
+                    {
+                        dataProjects.map((project) => (
+                            <a
+                                href={project.url}
+                                class="space-y-3 lg:w-2/5 flex-shrink-0"
+                                target="_blank"
+                            >
+                                <img
+                                    src={project.img}
+                                    alt="Projects"
+                                    class="rounded-lg w-full h-52 lg:h-64"
+                                />
+                                <h3 class="font-bold text-xl">
+                                    {project.name}
+                                </h3>
+                            </a>
+                        ))
+                    }
+                </div>
             </div>
         </section>
     </main>
@@ -108,7 +137,7 @@ const dataContact = {
             </div>
         </div>
 
-        <div class="border rounded-lg p-10 lg:w-2/3">
+        <div class="border rounded-lg px-5 py-10 md:p-10 lg:w-2/3">
             <MyExp client:load />
         </div>
     </footer>
