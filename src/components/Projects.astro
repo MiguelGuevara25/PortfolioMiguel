@@ -1,0 +1,27 @@
+---
+import { dataProjects } from "../data";
+---
+
+<section class="p-10 border rounded-lg text-gray-300">
+  <h3 class="text-4xl font-bold mb-8">My Projects</h3>
+  <div class="w-full overflow-x-scroll overflow-y-hidden custom-scrollbar">
+    <div class="flex gap-5 mb-4">
+      {
+        dataProjects.map((project) => (
+          <a
+            href={project.url}
+            class="space-y-3 w-60 lg:w-2/5 flex-shrink-0"
+            target="_blank"
+          >
+            <img
+              src={project.img}
+              alt="Projects"
+              class="rounded-lg w-full h-32 lg:h-64"
+            />
+            <h3 class="font-bold text-xl">{project.name}</h3>
+          </a>
+        ))
+      }
+    </div>
+  </div>
+</section>

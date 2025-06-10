@@ -8,137 +8,105 @@ import Layout from "../layouts/Layout.astro";
 import Header from "../components/Header.astro";
 import MyExp from "../components/MyExp";
 import pdf from "/pdf/CV-Miguel-Guevara.pdf";
-import { dataProjects } from "../data";
 import "animate.css";
+import Projects from "../components/Projects.astro";
 
 const dataContact = {
-    age: 24,
-    email: "miguel_g1789@hotmail.com",
-    phone: "+51 931 130 017",
-    location: "Lima, Perú",
+  age: 24,
+  email: "miguel_g1789@hotmail.com",
+  phone: "+51 931 130 017",
+  location: "Lima, Perú",
 };
 ---
 
 <Layout title="Portfolio Miguel Guevara">
-    <Header />
-    <main
-        class="flex flex-col gap-3 lg:max-w-screen-xl md:max-w-screen-lg w-[90%] mx-auto"
-    >
-        <section class="flex lg:flex-row flex-col gap-3 text-gray-300">
-            <Info />
+  <Header />
+  <main
+    class="flex flex-col gap-3 lg:max-w-screen-xl md:max-w-screen-lg w-[90%] mx-auto"
+  >
+    <section class="flex lg:flex-row flex-col gap-3 text-gray-300">
+      <Info />
 
-            <div
-                class="hidden lg:block border basis-1/3 rounded-lg overflow-hidden"
-            >
-                <img
-                    src="/miguel.webp"
-                    alt="Miguel Guevara"
-                    class="rounded-lg h-full object-cover object-right"
-                />
-            </div>
-        </section>
+      <div class="hidden lg:block border basis-1/3 rounded-lg overflow-hidden">
+        <img
+          src="/miguel.webp"
+          alt="Miguel Guevara"
+          class="rounded-lg h-full object-cover object-right"
+        />
+      </div>
+    </section>
 
-        <section class="p-10 border rounded-lg text-gray-300">
-            <h3 class="text-4xl font-bold mb-8">My Projects</h3>
-            <div
-                class="w-full overflow-x-scroll overflow-y-hidden custom-scrollbar"
-            >
-                <div class="flex gap-5 mb-4">
-                    {
-                        dataProjects.map((project) => (
-                            <a
-                                href={project.url}
-                                class="space-y-3 w-60 lg:w-2/5 flex-shrink-0"
-                                target="_blank"
-                            >
-                                <img
-                                    src={project.img}
-                                    alt="Projects"
-                                    class="rounded-lg w-full h-32 lg:h-64"
-                                />
-                                <h3 class="font-bold text-xl">
-                                    {project.name}
-                                </h3>
-                            </a>
-                        ))
-                    }
-                </div>
-            </div>
-        </section>
-    </main>
+    <Projects />
+  </main>
 
-    <footer
-        class="flex lg:flex-row flex-col-reverse gap-3 mt-3 lg:max-w-screen-xl md:max-w-screen-lg w-[90%] mx-auto text-gray-300"
-    >
-        <div class="rounded-lg basis-1/3 p-10 border space-y-5">
-            <h3 class="text-4xl font-bold">Contact Me</h3>
-            <div class="uppercase space-y-5 [&>a]:w-max">
-                <a
-                    href="https://wa.me/+51931130017"
-                    target="_blank"
-                    class="flex items-center gap-3"
-                >
-                    <FaWhatsapp className="text-3xl" />
-                    <div class="flex flex-col">
-                        <span class="text-xs">Whatsapp</span>
-                        <span>{dataContact.phone}</span>
-                    </div>
-                </a>
+  <footer
+    class="flex lg:flex-row flex-col-reverse gap-3 mt-3 lg:max-w-screen-xl md:max-w-screen-lg w-[90%] mx-auto text-gray-300"
+  >
+    <div class="rounded-lg basis-1/3 p-10 border space-y-5">
+      <h3 class="text-4xl font-bold">Contact Me</h3>
+      <div class="uppercase space-y-5 [&>a]:w-max">
+        <a
+          href="https://wa.me/+51931130017"
+          target="_blank"
+          class="flex items-center gap-3"
+        >
+          <FaWhatsapp className="text-3xl" />
+          <div class="flex flex-col">
+            <span class="text-xs">Whatsapp</span>
+            <span>{dataContact.phone}</span>
+          </div>
+        </a>
 
-                <a
-                    href="mailto:miguel_g1789@hotmail.com"
-                    target="_blank"
-                    class="flex items-center gap-3"
-                >
-                    <BiEnvelope className="text-3xl" />
-                    <div class="flex flex-col">
-                        <span class="text-xs">Email</span>
-                        <span class="lowercase">{dataContact.email}</span>
-                    </div>
-                </a>
+        <a
+          href="mailto:miguel_g1789@hotmail.com"
+          target="_blank"
+          class="flex items-center gap-3"
+        >
+          <BiEnvelope className="text-3xl" />
+          <div class="flex flex-col">
+            <span class="text-xs">Email</span>
+            <span class="lowercase">{dataContact.email}</span>
+          </div>
+        </a>
 
-                <a
-                    href="tel:51931130017"
-                    target="_blank"
-                    class="flex items-center gap-3"
-                >
-                    <MdPhone className="text-3xl" />
-                    <div class="flex flex-col">
-                        <span class="text-xs">Phone</span>
-                        <span class="lowercase">{dataContact.phone}</span>
-                    </div>
-                </a>
+        <a
+          href="tel:51931130017"
+          target="_blank"
+          class="flex items-center gap-3"
+        >
+          <MdPhone className="text-3xl" />
+          <div class="flex flex-col">
+            <span class="text-xs">Phone</span>
+            <span class="lowercase">{dataContact.phone}</span>
+          </div>
+        </a>
 
-                <a
-                    href={pdf}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    download="CV-Miguel-Guevara.pdf"
-                    class="flex items-center gap-3"
-                >
-                    <IoDocumentText className="text-3xl" />
-                    <div class="flex flex-col">
-                        <span class="text-xs">CV</span>
-                        <span class="capitalize">Download now</span>
-                    </div>
-                </a>
+        <a
+          href={pdf}
+          target="_blank"
+          rel="noopener noreferrer"
+          download="CV-Miguel-Guevara.pdf"
+          class="flex items-center gap-3"
+        >
+          <IoDocumentText className="text-3xl" />
+          <div class="flex flex-col">
+            <span class="text-xs">CV</span>
+            <span class="capitalize">Download now</span>
+          </div>
+        </a>
 
-                <a
-                    href="tel:51931130017"
-                    target="_blank"
-                    class="flex items-center gap-3"
-                >
-                    <IoLocationSharp className="text-3xl" />
-                    <div class="flex flex-col">
-                        <span class="text-xs">Location</span>
-                        <span class="capitalize">{dataContact.location}</span>
-                    </div>
-                </a>
-            </div>
-        </div>
+        <span class="flex items-center gap-3">
+          <IoLocationSharp className="text-3xl" />
+          <div class="flex flex-col">
+            <span class="text-xs">Location</span>
+            <span class="capitalize">{dataContact.location}</span>
+          </div>
+        </span>
+      </div>
+    </div>
 
-        <div class="border rounded-lg px-5 py-10 md:p-10 lg:w-2/3">
-            <MyExp client:load />
-        </div>
-    </footer>
+    <div class="border rounded-lg px-5 py-10 md:p-10 lg:w-2/3">
+      <MyExp client:load />
+    </div>
+  </footer>
 </Layout>
