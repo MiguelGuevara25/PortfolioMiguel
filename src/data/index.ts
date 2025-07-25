@@ -103,3 +103,17 @@ export const dataProjects = [
     url: "https://coticriptos.netlify.app/",
   },
 ];
+
+export const education = [
+  {
+    degree: "Ingeniería en Sistemas de Información",
+    institution: "Universidad Peruana de Ciencias Aplicadas (UPC)",
+    period: "2018 - Actualidad",
+    honors: "Especialización en Desarrollo de Software",
+  },
+];
+
+export const certifications = [
+  "Scrum Fundamentals Certified (SFC)",
+  "React y TypeScript - La Guía Completa (Udemy)",
+];

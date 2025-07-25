@@ -1,75 +1,279 @@
 ---
 interface Props {
-    title: string;
+  title: string;
 }
 
 const { title } = Astro.props;
+import "@fontsource-variable/urbanist";
 ---
 
 <!doctype html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="description" content="Astro description" />
-        <meta name="viewport" content="width=device-width" />
-        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-        <meta name="generator" content={Astro.generator} />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-            href="https://fonts.googleapis.com/css2?family=Catamaran:wght@400;700&display=swap"
-            rel="stylesheet"
-        />
-        <title>{title}</title>
-    </head>
-    <body>
-        <slot />
-    </body>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <slot />
+  </body>
 </html>
 
 <style is:global>
-    * {
-        font-family: "Catamaran", sans-serif;
+  * {
+    font-family: "Urbanist Variable", sans-serif;
+  }
+
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes slide-up {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes slide-in-right {
+    from {
+      opacity: 0;
+      transform: translateX(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes slide-in-left {
+    from {
+      opacity: 0;
+      transform: translateX(-30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes slide-in-up {
+    from {
+      opacity: 0;
+      transform: translateY(40px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes bounce-in {
+    0% {
+      opacity: 0;
+      transform: scale(0.3);
+    }
+    50% {
+      transform: scale(1.05);
+    }
+    70% {
+      transform: scale(0.9);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  @keyframes float {
+    0%,
+    100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+  }
+
+  @keyframes float-delayed {
+    0%,
+    100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-15px);
+    }
+  }
+
+  @keyframes gradient {
+    0%,
+    100% {
+      background-size: 200% 200%;
+      background-position: left center;
+    }
+    50% {
+      background-size: 200% 200%;
+      background-position: right center;
+    }
+  }
+
+  @keyframes bounce-subtle {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-5px);
+    }
+  }
+
+  @keyframes pulse-slow {
+    0%,
+    100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.7;
+    }
+  }
+
+  .animate-fade-in {
+    animation: fade-in 0.8s ease-out;
+  }
+
+  .animate-fade-in-delayed {
+    animation: fade-in 0.8s ease-out 0.3s both;
+  }
+
+  .animate-fade-in-up {
+    animation: slide-up 0.8s ease-out;
+  }
+
+  .animate-slide-up {
+    animation: slide-up 0.6s ease-out;
+  }
+
+  .animate-slide-up-delayed {
+    animation: slide-up 0.6s ease-out 0.2s both;
+  }
+
+  .animate-slide-in-right {
+    animation: slide-in-right 0.8s ease-out;
+  }
+
+  .animate-slide-in-left {
+    animation: slide-in-left 0.8s ease-out;
+  }
+
+  .animate-slide-in-up {
+    animation: slide-in-up 0.8s ease-out;
+  }
+
+  .animate-bounce-in {
+    animation: bounce-in 0.8s ease-out;
+  }
+
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .animate-float-delayed {
+    animation: float-delayed 8s ease-in-out infinite 2s;
+  }
+
+  .animate-gradient {
+    animation: gradient 3s ease infinite;
+  }
+
+  .animate-bounce-subtle {
+    animation: bounce-subtle 2s ease-in-out infinite;
+  }
+
+  .animate-pulse-slow {
+    animation: pulse-slow 3s ease-in-out infinite;
+  }
+
+  /* Scroll-based animations */
+  /* @media (prefers-reduced-motion: no-preference) {
+    .animate-on-scroll {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.6s ease-out;
     }
 
-    html {
-        background-color: #0f172a;
+    .animate-on-scroll.in-view {
+      opacity: 1;
+      transform: translateY(0);
     }
+  } */
 
-    .custom-scrollbar {
-        overflow-x: auto; /* Permitir desplazamiento horizontal */
-        -webkit-overflow-scrolling: touch; /* Asegurar desplazamiento suave en móviles */
-    }
+  .button__1 {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    white-space: nowrap;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    font-weight: 500;
+    height: 2.75rem;
+    border-radius: 0.375rem;
+    color: #fff;
+  }
 
-    .custom-scrollbar::-webkit-scrollbar {
-        height: 10px;
-    }
+  .button__2,
+  .button__3 {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    white-space: nowrap;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    font-weight: 500;
+    height: 2.75rem;
+    border-radius: 0.375rem;
+    border: 1px solid rgb(51, 65, 85);
+    color: #cbd5e1;
+    background-color: rgba(15, 23, 42, 0.502);
+  }
 
-    .custom-scrollbar::-webkit-scrollbar-track {
-        background: #2d2d2d;
-        border-radius: 10px;
-    }
+  .button__3 {
+    border: 1px solid rgb(71 85 105 / 0.5);
+    background-color: rgba(15, 23, 42, 0.3);
+  }
 
-    .custom-scrollbar::-webkit-scrollbar-thumb {
-        background: #d1d5db;
-        border-radius: 10px;
-    }
+  .badge__1 {
+    display: inline-flex;
+    align-items: center;
+    border-radius: 9999px;
+    border: 1px solid #3b82f6;
+    padding: 0.125rem 0.625rem;
+    font-size: 0.75rem;
+    line-height: 1rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: #60a5fa;
+    background-color: #3b82f61a;
+  }
 
-    .custom-scrollbar::-webkit-scrollbar-button {
-        width: 250px;
-    }
-
-    /* Para pantallas más grandes */
-    @media (min-width: 768px) {
-        .custom-scrollbar::-webkit-scrollbar {
-            width: 10px;
-        }
-    }
-
-    /* Para dispositivos móviles */
-    @media (max-width: 767px) {
-        .custom-scrollbar::-webkit-scrollbar {
-            height: 8px;
-        }
-    }
+  .badge__2 {
+    border: 1px solid #3b82f6;
+    color: #60a5fa;
+    background-color: #3b82f61a;
+  }
 </style>
