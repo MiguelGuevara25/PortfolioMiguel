@@ -36,74 +36,6 @@ export const data = [
   },
 ];
 
-export const dataProjects = [
-  {
-    name: "Raíces",
-    img: "/img/projects/projectRaices.jfif",
-    url: "https://raices-p.vercel.app/",
-  },
-
-  {
-    name: "Pristine Pool & Spa",
-    img: "/img/projects/projectPristinePools.png",
-    url: "https://www.pristinepoolandspas.com/",
-  },
-
-  {
-    name: "Task Flow",
-    img: "/img/projects/projectTaskFlow.webp",
-    url: "https://task-flow-frontend-one.vercel.app/",
-  },
-
-  {
-    name: "Museos Lima",
-    img: "/img/projects/projectMuseosLima.png",
-    url: "https://museos-lima.vercel.app/",
-  },
-
-  {
-    name: "Cyberborders",
-    img: "/img/projects/projectCyberborder.png",
-    url: "https://www.cyberborders.com/",
-  },
-
-  {
-    name: "Glinseal",
-    img: "/img/projects/projectGlinseal.png",
-    url: "https://glinsealastro.vercel.app/",
-  },
-  {
-    name: "Get Energy S.L",
-    img: "/img/projects/projectGetEnergy.PNG",
-    url: "https://www.getenergy.es/",
-  },
-  {
-    name: "Grupo Comfisa SAC",
-    img: "/img/projects/projectComfisa.png",
-    url: "https://grupo-comfisa.vercel.app/",
-  },
-  {
-    name: "Susana Ferrel Coaching & Consultoría",
-    img: "/img/projects/projectSusana.png",
-    url: "https://susanaferrel.com/",
-  },
-  {
-    name: "HSE Seal",
-    img: "/img/projects/projectHSESeal.PNG",
-    url: "https://hseseal.com/",
-  },
-  {
-    name: "Festival Music",
-    img: "/img/projects/projectFestivalMusic.png",
-    url: "https://festivaldemusicaa.netlify.app/",
-  },
-  {
-    name: "Cryptocurrency Quote",
-    img: "/img/projects/projectCripto.png",
-    url: "https://coticriptos.netlify.app/",
-  },
-];
-
 export const education = [
   {
     degree: "Ingeniería en Sistemas de Información",
@@ -116,4 +48,95 @@ export const education = [
 export const certifications = [
   "Scrum Fundamentals Certified (SFC)",
   "React y TypeScript - La Guía Completa (Udemy)",
+];
+
+export const projects = [
+  {
+    title: "Raíces",
+    image: "/img/projects/projectRaices.jfif",
+    technologies: ["React", "Astro", "TailwindCSS"],
+    github: "#",
+    demo: "https://raices-p.vercel.app/",
+    type: "fullstack" as const,
+  },
+  {
+    title: "Pristine Pool & Spa",
+    image: "/img/projects/projectPristinePools.png",
+    technologies: ["NextJS", "TailwindCSS", "Vercel"],
+    github: "#",
+    demo: "https://app.powerbi.com/view?r=eyJrIjoiYjdjYmQwYmQtMDViYy00NTQxLTk0MGUtYWExNWY2MzViOTczIiwidCI6IjBlMGNiMDYwLTA5YWQtNDlmNS1hMDA1LTY4YjliNDlhYTFmNiIsImMiOjR9",
+    type: "data" as const,
+  },
+  {
+    title: "Pristine Pool & Spa",
+    image: "/img/projects/projectPristinePools.png",
+    technologies: ["NextJS", "TailwindCSS", "Vercel"],
+    github: "#",
+    demo: "https://www.pristinepoolandspas.com/",
+    type: "data" as const,
+  },
+  {
+    title: "Task Flow",
+    image: "/img/projects/projectTaskFlow.webp",
+    technologies: ["React", "NextJS", "Typescript", "Spring Boot"],
+    github: "#",
+    demo: "https://task-flow-frontend-one.vercel.app/",
+    type: "fullstack" as const,
+  },
+  {
+    title: "Museos Lima",
+    image: "/img/projects/projectMuseosLima.png",
+    technologies: ["NextJS", "TailwindCSS", "Vercel"],
+    github: "#",
+    demo: "https://museos-lima.vercel.app/",
+    type: "data" as const,
+  },
+  {
+    title: "Cyberborders",
+    image: "/img/projects/projectCyberborder.png",
+    technologies: ["NextJS", "TailwindCSS", "Vercel"],
+    github: "#",
+    demo: "https://www.cyberborders.com/",
+    type: "fullstack" as const,
+  },
+  {
+    title: "Glinseal",
+    image: "/img/projects/projectGlinseal.png",
+    technologies: ["Astro", "TailwindCSS", "Vercel"],
+    github: "#",
+    demo: "https://glinsealastro.vercel.app/",
+    type: "data" as const,
+  },
+  {
+    title: "Get Energy S.L",
+    image: "/img/projects/projectGetEnergy.PNG",
+    technologies: ["HTML", "CSS", "Javascript"],
+    github: "#",
+    demo: "https://www.getenergy.es/",
+    type: "fullstack" as const,
+  },
+  {
+    title: "HSE Seal",
+    image: "/img/projects/projectHSESeal.PNG",
+    technologies: ["HTML", "CSS", "Javascript"],
+    github: "#",
+    demo: "https://hseseal.com/",
+    type: "data" as const,
+  },
+  {
+    title: "Festival Music",
+    image: "/img/projects/projectFestivalMusic.png",
+    technologies: ["HTML", "CSS"],
+    github: "#",
+    demo: "https://festivaldemusicaa.netlify.app/",
+    type: "fullstack" as const,
+  },
+  {
+    title: "Cryptocurrency Quote",
+    image: "/img/projects/projectCripto.png",
+    technologies: ["React", "TailwindCSS", "Javascript"],
+    github: "#",
+    demo: "https://coticriptos.netlify.app/",
+    type: "data" as const,
+  },
 ];

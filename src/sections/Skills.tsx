@@ -203,129 +203,192 @@ const Skills = () => {
             </div>
           </div>
 
-          {/* Data Analysis Technologies */}
-          <div className="animate-slide-in-right">
-            <h3 className="text-2xl font-bold text-white mb-8 flex items-center">
-              <div className="h-8 w-8 rounded bg-gradient-to-r from-purple-500 to-purple-600 mr-3 flex items-center justify-center">
-                <FaChartBar className="h-4 w-4 text-white" />
-              </div>
-              Data Analysis
-            </h3>
+          <div>
+            {/* Data Analysis Technologies */}
+            <div className="animate-slide-in-right">
+              <h3 className="text-2xl font-bold text-white mb-8 flex items-center">
+                <div className="h-8 w-8 rounded bg-gradient-to-r from-purple-500 to-purple-600 mr-3 flex items-center justify-center">
+                  <FaChartBar className="h-4 w-4 text-white" />
+                </div>
+                Data Analysis
+              </h3>
 
-            <div className="space-y-8">
-              {/* Programming Languages */}
-              <div>
-                <h4 className="text-lg font-semibold text-purple-400 mb-4">
-                  Lenguajes
-                </h4>
-                <div className="grid grid-cols-2 sm:grid-cols-2 gap-4">
-                  {[
-                    {
-                      name: "Python",
-                      level: 25,
-                      color: "from-sky-700 to-amber-300",
-                      icon: <FaPython className="h-6 w-6 text-white" />,
-                    },
-                    {
-                      name: "SQL",
-                      level: 60,
-                      color: "from-orange-500 to-orange-700",
-                      icon: <FaDatabase className="h-6 w-6 text-white" />,
-                    },
-                  ].map((tech, index) => (
-                    <div
-                      key={tech.name}
-                      className="border-slate-700/50 bg-slate-800/30 backdrop-blur-sm hover:bg-slate-800/50 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-purple-500/10 group animate-fade-in-up"
-                      style={{ animationDelay: `${index * 100}ms` }}
-                    >
-                      <div className="p-4 text-center">
-                        <div className="mb-3">
-                          <div
-                            className={`h-12 w-12 rounded-lg bg-gradient-to-r ${tech.color} mx-auto flex items-center justify-center text-white font-bold text-sm group-hover:scale-110 transition-transform duration-300`}
-                          >
-                            {tech.icon}
+              <div className="space-y-8">
+                {/* Programming Languages */}
+                <div>
+                  <h4 className="text-lg font-semibold text-purple-400 mb-4">
+                    Lenguajes
+                  </h4>
+                  <div className="grid grid-cols-2 sm:grid-cols-2 gap-4">
+                    {[
+                      {
+                        name: "Python",
+                        level: 25,
+                        color: "from-sky-700 to-amber-300",
+                        icon: <FaPython className="h-6 w-6 text-white" />,
+                      },
+                      {
+                        name: "SQL",
+                        level: 60,
+                        color: "from-orange-500 to-orange-700",
+                        icon: <FaDatabase className="h-6 w-6 text-white" />,
+                      },
+                    ].map((tech, index) => (
+                      <div
+                        key={tech.name}
+                        className="border-slate-700/50 bg-slate-800/30 backdrop-blur-sm hover:bg-slate-800/50 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-purple-500/10 group animate-fade-in-up"
+                        style={{ animationDelay: `${index * 100}ms` }}
+                      >
+                        <div className="p-4 text-center">
+                          <div className="mb-3">
+                            <div
+                              className={`h-12 w-12 rounded-lg bg-gradient-to-r ${tech.color} mx-auto flex items-center justify-center text-white font-bold text-sm group-hover:scale-110 transition-transform duration-300`}
+                            >
+                              {tech.icon}
+                            </div>
                           </div>
+                          <h5 className="font-medium text-white mb-2 group-hover:text-purple-400 transition-colors duration-300">
+                            {tech.name}
+                          </h5>
+                          <div className="w-full bg-slate-700 rounded-full h-2 mb-2">
+                            <div
+                              className={`bg-gradient-to-r ${tech.color} h-2 rounded-full transition-all duration-1000 ease-out`}
+                              style={{ width: `${tech.level}%` }}
+                            ></div>
+                          </div>
+                          <span className="text-xs text-slate-400">
+                            {tech.level}%
+                          </span>
                         </div>
-                        <h5 className="font-medium text-white mb-2 group-hover:text-purple-400 transition-colors duration-300">
-                          {tech.name}
-                        </h5>
-                        <div className="w-full bg-slate-700 rounded-full h-2 mb-2">
-                          <div
-                            className={`bg-gradient-to-r ${tech.color} h-2 rounded-full transition-all duration-1000 ease-out`}
-                            style={{ width: `${tech.level}%` }}
-                          ></div>
-                        </div>
-                        <span className="text-xs text-slate-400">
-                          {tech.level}%
-                        </span>
                       </div>
-                    </div>
-                  ))}
+                    ))}
+                  </div>
+                </div>
+
+                {/* Libraries & Tools */}
+                <div>
+                  <h4 className="text-lg font-semibold text-purple-400 mb-4">
+                    Librerías & Herramientas
+                  </h4>
+                  <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 ">
+                    {[
+                      {
+                        name: "Pandas",
+                        level: 25,
+                        color: "from-blue-500 to-blue-700",
+                        icon: <SiPandas className="h-6 w-6 text-white" />,
+                      },
+                      {
+                        name: "NumPy",
+                        level: 25,
+                        color: "from-blue-400 to-blue-600",
+                        icon: <SiNumpy className="h-6 w-6 text-white" />,
+                      },
+                      {
+                        name: "Power BI",
+                        level: 50,
+                        color: "from-yellow-500 to-yellow-700",
+                        icon: <BsBarChartFill className="h-6 w-6 text-white" />,
+                      },
+                    ].map((tech, index) => (
+                      <div
+                        key={tech.name}
+                        className="border-slate-700/50 bg-slate-800/30 backdrop-blur-sm hover:bg-slate-800/50 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-purple-500/10 group animate-fade-in-up"
+                        style={{ animationDelay: `${(index + 4) * 100}ms` }}
+                      >
+                        <div className="p-4 text-center">
+                          <div className="mb-3">
+                            <div
+                              className={`h-12 w-12 rounded-lg bg-gradient-to-r ${tech.color} mx-auto flex items-center justify-center text-white font-bold text-sm group-hover:scale-110 transition-transform duration-300`}
+                            >
+                              {tech.icon}
+                            </div>
+                          </div>
+                          <h5 className="font-medium text-white mb-2 group-hover:text-purple-400 transition-colors duration-300">
+                            {tech.name}
+                          </h5>
+                          <div className="w-full bg-slate-700 rounded-full h-2 mb-2">
+                            <div
+                              className={`bg-gradient-to-r ${tech.color} h-2 rounded-full transition-all duration-1000 ease-out`}
+                              style={{ width: `${tech.level}%` }}
+                            ></div>
+                          </div>
+                          <span className="text-xs text-slate-400">
+                            {tech.level}%
+                          </span>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
                 </div>
               </div>
+            </div>
 
-              {/* Libraries & Tools */}
-              <div>
-                <h4 className="text-lg font-semibold text-purple-400 mb-4">
-                  Librerías & Herramientas
-                </h4>
-                <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 ">
-                  {[
-                    {
-                      name: "Pandas",
-                      level: 25,
-                      color: "from-blue-500 to-blue-700",
-                      icon: <SiPandas className="h-6 w-6 text-white" />,
-                    },
-                    {
-                      name: "NumPy",
-                      level: 25,
-                      color: "from-blue-400 to-blue-600",
-                      icon: <SiNumpy className="h-6 w-6 text-white" />,
-                    },
-                    {
-                      name: "Power BI",
-                      level: 50,
-                      color: "from-yellow-500 to-yellow-700",
-                      icon: <BsBarChartFill className="h-6 w-6 text-white" />,
-                    },
-                  ].map((tech, index) => (
-                    <div
-                      key={tech.name}
-                      className="border-slate-700/50 bg-slate-800/30 backdrop-blur-sm hover:bg-slate-800/50 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-purple-500/10 group animate-fade-in-up"
-                      style={{ animationDelay: `${(index + 4) * 100}ms` }}
-                    >
-                      <div className="p-4 text-center">
-                        <div className="mb-3">
-                          <div
-                            className={`h-12 w-12 rounded-lg bg-gradient-to-r ${tech.color} mx-auto flex items-center justify-center text-white font-bold text-sm group-hover:scale-110 transition-transform duration-300`}
-                          >
-                            {tech.icon}
-                          </div>
-                        </div>
-                        <h5 className="font-medium text-white mb-2 group-hover:text-purple-400 transition-colors duration-300">
-                          {tech.name}
-                        </h5>
-                        <div className="w-full bg-slate-700 rounded-full h-2 mb-2">
-                          <div
-                            className={`bg-gradient-to-r ${tech.color} h-2 rounded-full transition-all duration-1000 ease-out`}
-                            style={{ width: `${tech.level}%` }}
-                          ></div>
-                        </div>
-                        <span className="text-xs text-slate-400">
-                          {tech.level}%
-                        </span>
-                      </div>
-                    </div>
-                  ))}
+            {/* Cloud & DevOps */}
+            <div className="animate-fade-in-up mt-16">
+              <h3 className="text-2xl font-bold text-white mb-8 text-center flex items-center">
+                <div className="h-8 w-8 rounded bg-gradient-to-r from-green-500 to-green-600 mr-3 flex items-center justify-center">
+                  <FaRegBuilding className="h-4 w-4 text-white" />
                 </div>
+                Cloud & DevOps
+              </h3>
+
+              <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-3 gap-6 max-w-4xl mx-auto">
+                {[
+                  {
+                    name: "Vercel",
+                    level: 50,
+                    color: "from-gray-700 to-gray-900",
+                    icon: <SiVercel className="h-6 w-6 text-white" />,
+                  },
+                  {
+                    name: "Git",
+                    level: 50,
+                    color: "from-orange-600 to-orange-800",
+                    icon: <SiGit className="h-6 w-6 text-white" />,
+                  },
+                  {
+                    name: "GitHub",
+                    level: 75,
+                    color: "from-gray-600 to-gray-800",
+                    icon: <FaGithub className="h-6 w-6 text-white" />,
+                  },
+                ].map((tech, index) => (
+                  <div
+                    key={tech.name}
+                    className="border-slate-700/50 bg-slate-800/30 backdrop-blur-sm hover:bg-slate-800/50 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-green-500/10 group animate-bounce-in"
+                    style={{ animationDelay: `${index * 150}ms` }}
+                  >
+                    <div className="p-4 text-center">
+                      <div className="mb-3">
+                        <div
+                          className={`h-12 w-12 rounded-lg bg-gradient-to-r ${tech.color} mx-auto flex items-center justify-center text-white font-bold text-sm group-hover:scale-110 transition-transform duration-300`}
+                        >
+                          {tech.icon}
+                        </div>
+                      </div>
+                      <h5 className="font-medium text-white mb-2 group-hover:text-green-400 transition-colors duration-300">
+                        {tech.name}
+                      </h5>
+                      <div className="w-full bg-slate-700 rounded-full h-2 mb-2">
+                        <div
+                          className={`bg-gradient-to-r ${tech.color} h-2 rounded-full transition-all duration-1000 ease-out`}
+                          style={{ width: `${tech.level}%` }}
+                        ></div>
+                      </div>
+                      <span className="text-xs text-slate-400">
+                        {tech.level}%
+                      </span>
+                    </div>
+                  </div>
+                ))}
               </div>
             </div>
           </div>
         </div>
 
         {/* Cloud & DevOps */}
-        <div className="mt-16 animate-fade-in-up">
+        {/* <div className="mt-16 animate-fade-in-up">
           <h3 className="text-2xl font-bold text-white mb-8 text-center flex items-center justify-center">
             <div className="h-8 w-8 rounded bg-gradient-to-r from-green-500 to-green-600 mr-3 flex items-center justify-center">
               <FaRegBuilding className="h-4 w-4 text-white" />
@@ -381,7 +444,7 @@ const Skills = () => {
               </div>
             ))}
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );
