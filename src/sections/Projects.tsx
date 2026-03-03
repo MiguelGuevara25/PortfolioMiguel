@@ -2,12 +2,12 @@ import { useEffect, useState } from "react";
 import { FaExternalLinkAlt } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa6";
 import { projects } from "../data";
+import { BiChevronLeft, BiChevronRight } from "react-icons/bi";
 
 const Projects = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
 
-  // Auto-play functionality
   useEffect(() => {
     if (!isAutoPlaying) return;
 
@@ -21,12 +21,12 @@ const Projects = () => {
   const goToSlide = (index: number) => {
     setCurrentIndex(index);
     setIsAutoPlaying(false);
-    setTimeout(() => setIsAutoPlaying(true), 10000); // Resume auto-play after 10 seconds
+    setTimeout(() => setIsAutoPlaying(true), 10000);
   };
 
   const goToPrevious = () => {
     setCurrentIndex(
-      (prevIndex) => (prevIndex - 1 + projects.length) % projects.length
+      (prevIndex) => (prevIndex - 1 + projects.length) % projects.length,
     );
     setIsAutoPlaying(false);
     setTimeout(() => setIsAutoPlaying(true), 10000);
@@ -73,7 +73,7 @@ const Projects = () => {
                   <div
                     className={`rounded-lg border text-card-foreground shadow-2xs overflow-hidden border-slate-700/50 bg-slate-800/20 backdrop-blur-sm hover:bg-slate-800/40 transition-all duration-500 group`}
                   >
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 h-[420px]">
                       <div className="aspect-video lg:aspect-auto overflow-hidden relative">
                         <img
                           src={project.image || "/placeholder.svg"}
@@ -84,7 +84,7 @@ const Projects = () => {
                         <div className="absolute top-4 left-4">
                           <div
                             className={`inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-hidden focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent hover:bg-primary/80 bg-gradient-to-r ${getTypeColor(
-                              project.type
+                              project.type,
                             )} text-white`}
                           >
                             {getTypeLabel(project.type)}
@@ -139,7 +139,7 @@ const Projects = () => {
             className="absolute left-4 top-1/2 transform -translate-y-1/2 z-10 bg-slate-900/80 backdrop-blur-sm border border-slate-700/50 rounded-full p-3 text-white hover:bg-slate-800/80 hover:scale-110 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/20 group"
             aria-label="Proyecto anterior"
           >
-            {/* <ChevronLeft className="h-5 w-5 group-hover:scale-110 transition-transform duration-300" /> */}
+            <BiChevronLeft className="h-5 w-5 group-hover:scale-110 transition-transform duration-300" />
           </button>
 
           <button
@@ -147,7 +147,7 @@ const Projects = () => {
             className="absolute right-4 top-1/2 transform -translate-y-1/2 z-10 bg-slate-900/80 backdrop-blur-sm border border-slate-700/50 rounded-full p-3 text-white hover:bg-slate-800/80 hover:scale-110 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/20 group"
             aria-label="Proyecto siguiente"
           >
-            {/* <ChevronRight className="h-5 w-5 group-hover:scale-110 transition-transform duration-300" /> */}
+            <BiChevronRight className="h-5 w-5 group-hover:scale-110 transition-transform duration-300" />
           </button>
 
           {/* Dots Indicator */}

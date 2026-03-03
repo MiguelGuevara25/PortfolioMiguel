@@ -35,10 +35,14 @@ const Header = () => {
             >
               Data Analytics
             </button>
-            <button className="border-slate-700 text-slate-300 hover:bg-slate-800 hover:text-white bg-transparent transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-blue-500/20 flex items-center gap-2 rounded px-4 py-2 border">
+            <a
+              href="/pdf/CV-Miguel-Guevara.pdf"
+              download="CV-Miguel-Guevara.pdf"
+              className="border-slate-700 text-slate-300 hover:bg-slate-800 hover:text-white bg-transparent transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-blue-500/20 flex items-center gap-2 rounded px-4 py-2 border"
+            >
               <MdDownload />
               CV
-            </button>
+            </a>
           </nav>
         </div>
       </div>

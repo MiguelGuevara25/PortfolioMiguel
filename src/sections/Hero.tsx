@@ -97,15 +97,24 @@ const Hero = () => {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4 mb-8 animate-slide-up-delayed">
-              <button className="ring-offset-background focus-visible:outline-hidden focus-visible:ring-ring focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 hover:bg-primary/90 px-8 bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-blue-500/25 group backdrop-blur-sm button__1">
+              <a
+                href="mailto:miguelguevara1789@gmail.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="ring-offset-background focus-visible:outline-hidden focus-visible:ring-ring focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 hover:bg-primary/90 px-8 bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-blue-500/25 group backdrop-blur-sm button__1"
+              >
                 <BiEnvelope className="mr-2 h-4 w-4 group-hover:animate-bounce" />
                 Contactar
-              </button>
+              </a>
 
-              <button className="ring-offset-background focus-visible:outline-hidden focus-visible:ring-ring focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 px-8 hover:bg-slate-800 hover:text-white backdrop-blur-sm transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-slate-500/25 group button__2">
+              <a
+                href="https://github.com/MiguelGuevara25"
+                target="_blank"
+                className="ring-offset-background focus-visible:outline-hidden focus-visible:ring-ring focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 px-8 hover:bg-slate-800 hover:text-white backdrop-blur-sm transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-slate-500/25 group button__2"
+              >
                 <FaGithub className="mr-2 h-4 w-4 group-hover:rotate-12 transition-transform duration-300" />
                 Ver Proyectos
-              </button>
+              </a>
             </div>
 
             <div className="flex items-center space-x-6 text-sm text-slate-400 animate-fade-in-delayed">

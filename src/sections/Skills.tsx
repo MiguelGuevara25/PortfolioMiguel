@@ -14,6 +14,7 @@ import {
 import { GrMysql } from "react-icons/gr";
 import { IoLogoJavascript } from "react-icons/io5";
 import {
+  SiAngular,
   SiAstro,
   SiGit,
   SiNextdotjs,
@@ -59,28 +60,28 @@ const Skills = () => {
                 <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
                   {[
                     {
-                      name: "JavaScript",
-                      level: 90,
-                      color: "from-yellow-400 to-yellow-600",
-                      icon: <IoLogoJavascript className="h-6 w-6 text-white" />,
-                    },
-                    {
-                      name: "TypeScript",
-                      level: 75,
-                      color: "from-blue-400 to-blue-600",
-                      icon: <SiTypescript className="h-6 w-6 text-white" />,
-                    },
-                    {
                       name: "React",
                       level: 80,
                       color: "from-cyan-300 to-cyan-600",
                       icon: <FaReact className="h-6 w-6 text-white" />,
                     },
                     {
+                      name: "Angular",
+                      level: 50,
+                      color: "from-black to-red-600",
+                      icon: <SiAngular className="h-6 w-6 text-white" />,
+                    },
+                    {
                       name: "Next.js",
                       level: 75,
                       color: "from-gray-700 to-gray-900",
                       icon: <SiNextdotjs className="h-6 w-6 text-white" />,
+                    },
+                    {
+                      name: "TypeScript",
+                      level: 75,
+                      color: "from-blue-400 to-blue-600",
+                      icon: <SiTypescript className="h-6 w-6 text-white" />,
                     },
                     {
                       name: "Tailwind CSS",
